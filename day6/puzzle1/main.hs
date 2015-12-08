@@ -6,14 +6,14 @@ data Light = Light {
     x      :: Int,
     y      :: Int,
     status :: Bool
-} deriving Show
+}
 
 type Grid = [Light]
 
 data Op =
       On
     | Off
-    | Toggle deriving Show
+    | Toggle
 
 data Command = Command {
     x1 :: Int,
@@ -21,7 +21,7 @@ data Command = Command {
     x2 :: Int,
     y2 :: Int,
     op :: Op
-} deriving Show
+}
 
 editLights :: Grid -> Command -> Grid
 editLights g c = [
